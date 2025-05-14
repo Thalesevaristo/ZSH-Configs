@@ -1,9 +1,4 @@
 # -----------------------------------------------------------------------------
-# => PERFORMANCE
-# -----------------------------------------------------------------------------
-zmodload zsh/zprof
-
-# -----------------------------------------------------------------------------
 # => ZAP PLUGIN MANAGER
 # -----------------------------------------------------------------------------
 ZAP_PATH="$HOME/.local/share/zap/zap.zsh"
@@ -24,7 +19,7 @@ fi
 # -----------------------------------------------------------------------------
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
-SAVEHIST=50000
+SAVEHIST=$HISTSIZE
 setopt APPEND_HISTORY
 setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -130,11 +125,10 @@ export PATH="$PATH:/usr/local/go/bin"
 # -----------------------------------------------------------------------------
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
-plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
-plug "reobin/typewritten"
 plug "zap-zsh/fzf"
 plug "hlissner/zsh-autopair"
+plug "reobin/typewritten"
 
 # -----------------------------------------------------------------------------
 # => KEYBINDINGS
